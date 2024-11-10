@@ -23,7 +23,7 @@ RUN jdeps --ignore-missing-deps -q  \
     --multi-release 21  \
     --print-module-deps  \
     --class-path './target/extracted/BOOT-INF/lib/*'  \
-    ./target/accounts-0.0.1-SNAPSHOT.jar > deps.info
+    ./target/cards-0.0.1-SNAPSHOT.jar > deps.info
 
 # Step 2: Custom jre build
 FROM eclipse-temurin:21 AS jre-build
