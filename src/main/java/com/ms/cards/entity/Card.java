@@ -11,6 +11,7 @@ import java.math.BigDecimal;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Table(name = "cards")
 public class Card extends BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,7 +24,7 @@ public class Card extends BaseEntity {
     @Column(updatable = false, unique = true, nullable = false)
     private String cardNumber;
 
-    @Column(updatable = false, nullable = false, name = "loan_type")
+    @Column(updatable = false, nullable = false, name = "card_type")
     private String type;
 
     private BigDecimal totalLimit;
