@@ -50,5 +50,6 @@ COPY --from=jre-build /javaruntime $JAVA_HOME
 
 # Continue with your application deployment
 RUN mkdir /opt/app
+RUN apt update && apt install curl -y
 COPY --from=jar-build /app/target/cards-0.0.1-SNAPSHOT.jar /opt/app/
 CMD ["java", "-jar", "/opt/app/cards-0.0.1-SNAPSHOT.jar"]
